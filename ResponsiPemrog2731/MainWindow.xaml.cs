@@ -24,5 +24,20 @@ namespace ResponsiPemrog2731
         {
             InitializeComponent();
         }
+
+        private void OnButtonAddItemClicked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void OnButtonGantiAlamatClicked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void OnButtonGantiMetodePembayranClicked(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

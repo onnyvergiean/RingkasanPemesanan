@@ -5,17 +5,41 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ResponsiPemrog2731"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="489" Width="800">
+    <Grid Margin="0,0,0,19">
+        <Rectangle HorizontalAlignment="Left" Height="337" Margin="240,74,0,0" Stroke="Black" VerticalAlignment="Top" Width="332"/>
         <Label Content="Ringkasan Pesanan" HorizontalAlignment="Left" Margin="29,36,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Rectangle HorizontalAlignment="Left" Height="163" Margin="29,74,0,0" Stroke="Black" VerticalAlignment="Top" Width="193"/>
-        <Label Content="Diantar Ke" HorizontalAlignment="Left" Margin="44,87,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Rectangle HorizontalAlignment="Left" Height="319" Margin="240,74,0,0" Stroke="Black" VerticalAlignment="Top" Width="332"/>
-        <Rectangle HorizontalAlignment="Left" Height="150" Margin="595,74,0,0" Stroke="Black" VerticalAlignment="Top" Width="172"/>
-        <Rectangle HorizontalAlignment="Left" Height="150" Margin="595,243,0,0" Stroke="Black" VerticalAlignment="Top" Width="172"/>
-        <Label Content="Item Pesanan" HorizontalAlignment="Left" Margin="259,87,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Label Content="Metode Pembayaran" HorizontalAlignment="Left" Margin="604,87,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Label Content="Total" HorizontalAlignment="Left" Margin="604,243,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Diantar Ke" HorizontalAlignment="Left" Margin="34,79,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Rectangle HorizontalAlignment="Left" Height="169" Margin="595,74,0,0" Stroke="Black" VerticalAlignment="Top" Width="172"/>
+        <Rectangle HorizontalAlignment="Left" Height="150" Margin="595,261,0,0" Stroke="Black" VerticalAlignment="Top" Width="172"/>
+        <Label Content="Item Pesanan" HorizontalAlignment="Left" Margin="259,79,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Metode Pembayaran" HorizontalAlignment="Left" Margin="604,79,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Total" HorizontalAlignment="Left" Margin="608,268,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Onny Vergiean Saputra" HorizontalAlignment="Left" Margin="36,113,0,0" VerticalAlignment="Top"/>
+        <Label Content="Karanglo Tlogoadi Mlati" HorizontalAlignment="Left" Margin="36,139,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="GantiAlamat" Content="Ganti Alamat" HorizontalAlignment="Left" Margin="36,209,0,0" VerticalAlignment="Top" Width="81" Click="OnButtonGantiAlamatClicked"/>
+        <ListBox HorizontalAlignment="Left" Height="172" Margin="259,114,0,0" VerticalAlignment="Top" Width="293"/>
+        <Button x:Name="ButtonAddItem" Content="+" HorizontalAlignment="Left" Margin="514,84,0,0" VerticalAlignment="Top" Width="38" Click="OnButtonAddItemClicked"/>
+
+        <Label x:Name="TotalHarga" Content="10000" HorizontalAlignment="Left" Margin="626,314,0,0" VerticalAlignment="Top" FontSize="35" FontWeight="Bold"/>
+        <Label Content="OVO" HorizontalAlignment="Left" Margin="604,113,0,0" VerticalAlignment="Top" FontSize="12"/>
+        <Label Content="500000" HorizontalAlignment="Left" Margin="604,131,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="GantiMetodePembayaran" Content="Ganti" HorizontalAlignment="Left" Margin="700,126,0,0" VerticalAlignment="Top" Width="60" Click="OnButtonGantiMetodePembayranClicked"/>
+        <Label Content="Promo" HorizontalAlignment="Left" Margin="604,177,0,0" VerticalAlignment="Top"/>
+        <Label Content="Mangewu" HorizontalAlignment="Left" Margin="604,195,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="GantiPromo" Content="Ganti" HorizontalAlignment="Left" Margin="700,190,0,0" VerticalAlignment="Top" Width="60" Click="OnButtonGantiPromoCLicked"/>
+        <Separator HorizontalAlignment="Left" Height="22" Margin="259,303,0,0" VerticalAlignment="Top" Width="293" Background="#FFF0F0F0"/>
+        <Label Content="Sub Total" HorizontalAlignment="Left" Margin="259,322,0,0" VerticalAlignment="Top"/>
+        <Label Content="Delivery Fee" HorizontalAlignment="Left" Margin="259,348,0,0" VerticalAlignment="Top"/>
+        <Label Content="Promo" HorizontalAlignment="Left" Margin="259,374,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="SubTotal" Content="0" HorizontalAlignment="Left" Margin="533,318,0,0" VerticalAlignment="Top"/>
+        <Label Content="15000" HorizontalAlignment="Left" Margin="507,345,0,0" VerticalAlignment="Top"/>
+        <Label Content="-5000" HorizontalAlignment="Left" Margin="507,374,0,0" VerticalAlignment="Top"/>
+
+
+
+
 
     </Grid>
 </Window>
