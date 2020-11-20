@@ -15,17 +15,16 @@ namespace ResponsiPemrog2731
     /// <summary>
     /// Interaction logic for Penawaran.xaml
     /// </summary>
-    public partial class Penawaran : Window, KeranjangEventListener
+    public partial class Penawaran : Window
     {
         
-
-        Seller onny;
+        
+        
         public Penawaran()
         {
             InitializeComponent();
 
-            Keranjang keranjangitem = new Keranjang();
-            KeranjangController keranjangController = new KeranjangController(keranjangitem, this);
+            
             List<Item> item = new List<Item>();
             item.Add(new Item() { nama = "Jeruk", harga = 5000 });
             item.Add(new Item() { nama = "Ice Tea", harga = 3000 });
@@ -38,24 +37,24 @@ namespace ResponsiPemrog2731
 
             ListItem.Items.Refresh();
 
-            onny = new Seller("onny", keranjangController);
 
         }
+
 
         
-
         private void OnMouseDoubleClicked(object sender, MouseButtonEventArgs e)
         {
-           
-            if (ListItem.SelectedIndex == 0)
-            {
-                ItemKeranjang jeruk = new ItemKeranjang("jeruk",5000);
-                onny.addItemKeranjang(jeruk);
-                MessageBox.Show("Jeruk");
-            }
-           
-        }
 
+            ListItem_Copy.Items.Add(ListItem.SelectedItem);
+
+        }
+        private void OnButtonAddItemClicked(object sender, RoutedEventArgs e)
+        {
+            
+            
+            
+
+        }
         public void onFailed(string message)
         {
             MessageBox.Show(message, "Warning");
@@ -66,8 +65,6 @@ namespace ResponsiPemrog2731
             ListItem.Items.Refresh();
         }
 
-
-
-
+       
     }
 }

@@ -7,12 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="489" Width="800">
     <Grid Margin="0,0,0,19">
-        <Rectangle HorizontalAlignment="Left" Height="337" Margin="240,74,0,0" Stroke="Black" VerticalAlignment="Top" Width="332"/>
+        <Rectangle HorizontalAlignment="Left" Height="346" Margin="240,74,0,0" Stroke="Black" VerticalAlignment="Top" Width="332"/>
         <Label Content="Ringkasan Pesanan" HorizontalAlignment="Left" Margin="29,36,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Rectangle HorizontalAlignment="Left" Height="163" Margin="29,74,0,0" Stroke="Black" VerticalAlignment="Top" Width="193"/>
         <Label Content="Diantar Ke" HorizontalAlignment="Left" Margin="34,79,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Rectangle HorizontalAlignment="Left" Height="169" Margin="595,74,0,0" Stroke="Black" VerticalAlignment="Top" Width="172"/>
-        <Rectangle HorizontalAlignment="Left" Height="150" Margin="595,261,0,0" Stroke="Black" VerticalAlignment="Top" Width="172"/>
+        <Rectangle HorizontalAlignment="Left" Height="159" Margin="595,261,0,0" Stroke="Black" VerticalAlignment="Top" Width="172"/>
         <Label Content="Item Pesanan" HorizontalAlignment="Left" Margin="259,79,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Label Content="Metode Pembayaran" HorizontalAlignment="Left" Margin="604,79,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Label Content="Total" HorizontalAlignment="Left" Margin="608,268,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
@@ -24,7 +24,7 @@
                 <DataTemplate>
                     <Grid Margin="0,2">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="200" />
+                            <ColumnDefinition Width="280" />
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" Text="{Binding nama}" TextAlignment="Left" />
                         <TextBlock Grid.Column="0" Text= "{Binding harga}"  TextAlignment="Right"/>
@@ -48,6 +48,20 @@
         <Label x:Name="SubTotal" Content="0" HorizontalAlignment="Left" Margin="533,318,0,0" VerticalAlignment="Top"/>
         <Label Content="15000" HorizontalAlignment="Left" Margin="507,345,0,0" VerticalAlignment="Top"/>
         <Label Content="-5000" HorizontalAlignment="Left" Margin="507,374,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name ="ListItem" HorizontalAlignment="Left" Height="152" Margin="29,268,0,0" VerticalAlignment="Top" Width="193" MouseDoubleClick="OnMouseDoubleClick">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0,2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="150" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="{Binding nama}" TextAlignment="Left" />
+                        <TextBlock Grid.Column="0" Text= "{Binding harga}"  TextAlignment="Right"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Label Content="Produk yang Ditawarkan" HorizontalAlignment="Left" Margin="29,243,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
 
 
 

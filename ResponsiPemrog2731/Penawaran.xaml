@@ -11,7 +11,7 @@
             <RowDefinition Height="97*"/>
             <RowDefinition Height="127*"/>
         </Grid.RowDefinitions>
-        <ListBox x:Name="ListItem" HorizontalAlignment="Left" Height="304" Margin="17,73,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="300" MouseDoubleClick="OnMouseDoubleClicked">
+        <ListBox x:Name="ListItem" HorizontalAlignment="Left" Height="121" Margin="17,73,0,0" VerticalAlignment="Top" Width="300" MouseDoubleClick="OnMouseDoubleClicked">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid Margin="0,2">
@@ -25,6 +25,20 @@
             </ListBox.ItemTemplate>
         </ListBox>
         <Label Content="Food yang ditawarkan" HorizontalAlignment="Left" Margin="17,21,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="ButtonAddItem" Content="Button" HorizontalAlignment="Left" Height="35" Margin="209,219,0,0" Grid.Row="1" VerticalAlignment="Top" Width="108" Click="OnButtonAddItemClicked"/>
+        <ListBox x:Name="ListItem_Copy" HorizontalAlignment="Center" Height="121" Margin="0,44,0,0" VerticalAlignment="Top" Width="300" MouseDoubleClick="OnMouseDoubleClicked" Grid.Row="1">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0,2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="200" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="{Binding nama}" TextAlignment="Left" />
+                        <TextBlock Grid.Column="0" Text= "{Binding harga}"  TextAlignment="Right"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
 
 
 

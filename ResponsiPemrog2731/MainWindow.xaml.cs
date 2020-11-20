@@ -14,34 +14,42 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace ResponsiPemrog2731
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window, KeranjangEventListener
-    {
+    public partial class MainWindow : Window
 
-        Penawaran penawaran = new Penawaran();
+
+        
+
         public MainWindow()
         {
+            
             InitializeComponent();
 
-            Keranjang keranjangItem = new Keranjang();
-            KeranjangController keranjangController = new KeranjangController(keranjangItem, this);
+            List<Item> item = new List<Item>();
+            item.Add(new Item() { nama = "Jeruk", harga = 5000 });
+            item.Add(new Item() { nama = "Ice Tea", harga = 3000 });
+            item.Add(new Item() { nama = "Ice Lemon", harga = 5000 });
+            item.Add(new Item() { nama = "Bakso", harga = 10000 });
+            item.Add(new Item() { nama = "Gado - Gado", harga = 12000 });
+            item.Add(new Item() { nama = "Sate", harga = 15000 });
+            ListItem.ItemsSource = item;
+            ListItem.Items.Refresh();
 
-
-            ListItemBeli.ItemsSource = keranjangItem.findAll();
 
             ListItemBeli.Items.Refresh();
-           
             
-
+            ListItemBeli.Items.Refresh();
         }
         
-       
-            
         
+
+
+
         private void OnButtonAddItemClicked(object sender, RoutedEventArgs e)
         {
             Penawaran penawaran = new Penawaran();
@@ -51,17 +59,20 @@ namespace ResponsiPemrog2731
 
         private void OnButtonGantiAlamatClicked(object sender, RoutedEventArgs e)
         {
-
+            GantiAlamat gantiAlamat = new GantiAlamat();
+            gantiAlamat.Show();
         }
 
         private void OnButtonGantiMetodePembayranClicked(object sender, RoutedEventArgs e)
         {
-
+            MetodePembayaran metodePembayaran = new MetodePembayaran();
+            metodePembayaran.Show();
         }
 
         private void OnButtonGantiPromoCLicked(object sender, RoutedEventArgs e)
         {
-
+            GantiPromo gantiPromo = new GantiPromo();
+            gantiPromo.Show();
         }
 
         public void onFailed(string message)
@@ -72,6 +83,11 @@ namespace ResponsiPemrog2731
         public void onSucceed(string message)
         {
             ListItemBeli.Items.Refresh();
+        }
+
+        private void OnMouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            ListItemBeli.Items.Add(ListItem.SelectedItem);
         }
     }
 }
