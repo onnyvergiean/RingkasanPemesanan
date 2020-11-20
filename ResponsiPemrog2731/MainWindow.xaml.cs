@@ -21,29 +21,18 @@ namespace ResponsiPemrog2731
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
+    {
 
-
-        
-
+        private Bucket bucket;
+        double subTotal = 0, saldo = 50000;
         public MainWindow()
         {
             
             InitializeComponent();
 
-            List<Item> item = new List<Item>();
-            item.Add(new Item() { nama = "Jeruk", harga = 5000 });
-            item.Add(new Item() { nama = "Ice Tea", harga = 3000 });
-            item.Add(new Item() { nama = "Ice Lemon", harga = 5000 });
-            item.Add(new Item() { nama = "Bakso", harga = 10000 });
-            item.Add(new Item() { nama = "Gado - Gado", harga = 12000 });
-            item.Add(new Item() { nama = "Sate", harga = 15000 });
-            ListItem.ItemsSource = item;
+            bucket = new Bucket();
+            ListItem.ItemsSource = bucket.GetItems();
             ListItem.Items.Refresh();
-
-
-            ListItemBeli.Items.Refresh();
-            
-            ListItemBeli.Items.Refresh();
         }
         
         
@@ -75,19 +64,45 @@ namespace ResponsiPemrog2731
             gantiPromo.Show();
         }
 
-        public void onFailed(string message)
-        {
-            MessageBox.Show(message, "Warning");
-        }
 
-        public void onSucceed(string message)
-        {
-            ListItemBeli.Items.Refresh();
-        }
 
         private void OnMouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
+            
+           
             ListItemBeli.Items.Add(ListItem.SelectedItem);
+            if(ListItem.SelectedIndex == 0)
+            {
+                subTotal += 5000;
+                saldo -= 5000;
+            }else if(ListItem.SelectedIndex == 1)
+            {
+                subTotal += 3000;
+                saldo -= 3000;
+            }
+            else if (ListItem.SelectedIndex == 2)
+            {
+                subTotal += 5000;
+                saldo -= 5000;
+            }
+            else if (ListItem.SelectedIndex == 3)
+            {
+                subTotal += 10000;
+                saldo -= 10000;
+            }
+            else if (ListItem.SelectedIndex == 4)
+            {
+                subTotal += 12000;
+                saldo -= 12000;
+            }
+            else
+            {
+                subTotal += 15000;
+                saldo -= 15000;
+            }
+            SubTotal.Content = String.Format("{0}",subTotal);
+            Saldo.Content = String.Format("{0}", saldo);
+            TotalHarga.Content = String.Format("{0}", subTotal + 10000);
         }
     }
 }

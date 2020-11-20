@@ -45,8 +45,8 @@
         <Label Content="Sub Total" HorizontalAlignment="Left" Margin="259,322,0,0" VerticalAlignment="Top"/>
         <Label Content="Delivery Fee" HorizontalAlignment="Left" Margin="259,348,0,0" VerticalAlignment="Top"/>
         <Label Content="Promo" HorizontalAlignment="Left" Margin="259,374,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="SubTotal" Content="0" HorizontalAlignment="Left" Margin="533,318,0,0" VerticalAlignment="Top"/>
-        <Label Content="15000" HorizontalAlignment="Left" Margin="507,345,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="SubTotal" Content="0" HorizontalAlignment="Left" Margin="507,326,0,0" VerticalAlignment="Top"/>
+        <Label Content="15000" HorizontalAlignment="Left" Margin="506,348,0,0" VerticalAlignment="Top"/>
         <Label Content="-5000" HorizontalAlignment="Left" Margin="507,374,0,0" VerticalAlignment="Top"/>
         <ListBox x:Name ="ListItem" HorizontalAlignment="Left" Height="152" Margin="29,268,0,0" VerticalAlignment="Top" Width="193" MouseDoubleClick="OnMouseDoubleClick">
             <ListBox.ItemTemplate>
