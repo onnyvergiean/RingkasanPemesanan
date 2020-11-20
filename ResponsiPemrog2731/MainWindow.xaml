@@ -19,12 +19,24 @@
         <Label Content="Onny Vergiean Saputra" HorizontalAlignment="Left" Margin="36,113,0,0" VerticalAlignment="Top"/>
         <Label Content="Karanglo Tlogoadi Mlati" HorizontalAlignment="Left" Margin="36,139,0,0" VerticalAlignment="Top"/>
         <Button x:Name="GantiAlamat" Content="Ganti Alamat" HorizontalAlignment="Left" Margin="36,209,0,0" VerticalAlignment="Top" Width="81" Click="OnButtonGantiAlamatClicked"/>
-        <ListBox HorizontalAlignment="Left" Height="172" Margin="259,114,0,0" VerticalAlignment="Top" Width="293"/>
+        <ListBox x:Name ="ListItemBeli" HorizontalAlignment="Left" Height="172" Margin="259,114,0,0" VerticalAlignment="Top" Width="293">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0,2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="200" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="{Binding nama}" TextAlignment="Left" />
+                        <TextBlock Grid.Column="0" Text= "{Binding harga}"  TextAlignment="Right"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
         <Button x:Name="ButtonAddItem" Content="+" HorizontalAlignment="Left" Margin="514,84,0,0" VerticalAlignment="Top" Width="38" Click="OnButtonAddItemClicked"/>
 
         <Label x:Name="TotalHarga" Content="10000" HorizontalAlignment="Left" Margin="626,314,0,0" VerticalAlignment="Top" FontSize="35" FontWeight="Bold"/>
-        <Label Content="OVO" HorizontalAlignment="Left" Margin="604,113,0,0" VerticalAlignment="Top" FontSize="12"/>
-        <Label Content="500000" HorizontalAlignment="Left" Margin="604,131,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="MetodeBayar" Content="OVO" HorizontalAlignment="Left" Margin="604,113,0,0" VerticalAlignment="Top" FontSize="12"/>
+        <Label x:Name="Saldo" Content="500000" HorizontalAlignment="Left" Margin="604,131,0,0" VerticalAlignment="Top"/>
         <Button x:Name="GantiMetodePembayaran" Content="Ganti" HorizontalAlignment="Left" Margin="700,126,0,0" VerticalAlignment="Top" Width="60" Click="OnButtonGantiMetodePembayranClicked"/>
         <Label Content="Promo" HorizontalAlignment="Left" Margin="604,177,0,0" VerticalAlignment="Top"/>
         <Label Content="Mangewu" HorizontalAlignment="Left" Margin="604,195,0,0" VerticalAlignment="Top"/>
