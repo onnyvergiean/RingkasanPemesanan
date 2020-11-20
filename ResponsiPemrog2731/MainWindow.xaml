@@ -1,0 +1,21 @@
+﻿<Window x:Class="ResponsiPemrog2731.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ResponsiPemrog2731"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label Content="Ringkasan Pesanan" HorizontalAlignment="Left" Margin="29,36,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Rectangle HorizontalAlignment="Left" Height="163" Margin="29,74,0,0" Stroke="Black" VerticalAlignment="Top" Width="193"/>
+        <Label Content="Diantar Ke" HorizontalAlignment="Left" Margin="44,87,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Rectangle HorizontalAlignment="Left" Height="319" Margin="240,74,0,0" Stroke="Black" VerticalAlignment="Top" Width="332"/>
+        <Rectangle HorizontalAlignment="Left" Height="150" Margin="595,74,0,0" Stroke="Black" VerticalAlignment="Top" Width="172"/>
+        <Rectangle HorizontalAlignment="Left" Height="150" Margin="595,243,0,0" Stroke="Black" VerticalAlignment="Top" Width="172"/>
+        <Label Content="Item Pesanan" HorizontalAlignment="Left" Margin="259,87,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Metode Pembayaran" HorizontalAlignment="Left" Margin="604,87,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Total" HorizontalAlignment="Left" Margin="604,243,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+
+    </Grid>
+</Window>
